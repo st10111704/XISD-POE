@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="Logo.jpg">
+  <title>Ministries</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: lightgrey;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav li {
+      height: 50px;
+    }
+
+    nav a {
+      height: 100%;
+      padding: 0 30px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+
+    nav a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .navbar li a.active {
+      color: #0066ff;
+    }
+
+    nav li:first-child {
+      margin-right: auto;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 250px;
+      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .sidebar li,
+    .a {
+      width: 100%;
+    }
+
+    .menu-button {
+      display: none;
+    }
+
+    @media(max-width: 800px) {
+      .hideOnMobile {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+      }
+    }
+
+    @media(max-width: 400px) {
+      .sidebar {
+        width: 100%;
+      }
+    }
+
+    .heading {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 70px;
+    }
+
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 30%;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+      background-color: #CEEAD6;
+    }
+
+    div.NYI {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 30%;
+      background-color: grey;
+    }
+
+    div.NYI img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.NYIdesc-1 {
+      padding: 15px;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+
+
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960"
+            width="26">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Ministries.html">Ministries</a></li>
+      <li><a href="Giving.html">Giving</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <ul class="navbar">
+      <li><a href="Ministries.html">Ministries</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a class="active" href="Ministries.html">Ministries</a></li>
+      <li class="hideOnMobile"><a href="Giving.html">Giving</a></li>
+      <li class="hideOnMobile"><a href="Contact.html">Contact</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+            viewBox="0 -960 960 960" width="26">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg></a></li>
+    </ul>
+  </nav>
+
+
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script>
+
+  <p class="heading">
+    Our Ministries
+  </p>
+
+  <div class="gallery">
+    <a target="blank" href="B&W.jpg">
+      <img src="B&W.jpg" alt="Church Picture" width="600" height="400">
+    </a>
+    <div class="desc">
+      <h2> NYI </h2>
+      "In NYI (Nazarene Youth International), <br>
+      we prioritize three fundamental <br>
+      strategies: evangelism, discipleship, and <br>
+      leadership development, often referred <br>
+      to as 'BE, DO, and GO'. These strategies <br>
+      form the essence of our identity and <br>
+      mission, shaping our message and <br>
+      guiding our actions. Through <br>
+      evangelism, we share the <br>
+      transformative message of Christ's love. <br>
+      In discipleship, we nurture spiritual <br>
+      growth and maturity in our youth. <br>
+      Through leadership development, we <br>
+      empower young leaders to impact their <br>
+      communities for Christ. Together, these <br>
+      strategies from the very fabric of <br>
+      Nazarene Youth International, guiding <br>
+      our efforts to fulfill our mission and <br>
+      reach the world for Christ."
+    </div>
+  </div>
+
+  <div class="gallery">
+    <a target="blank" href="children.jpg">
+      <img src="children.jpg" alt="Church Picture" width="600" height="400">
+    </a>
+    <div class="desc">
+      <h2> SDMI </h2>
+      The mission of SDMI (Sunday School <br>
+      and Discipleship Ministries <br>
+      International) is to fulfill the Great <br>
+      Commision by guiding children, youth, <br>
+      and adults towards a lifetime of <br>
+      Christian holiness. Specifically focusing <br>
+      on children, SDMI aims to provide <br>
+      environments where they can encounter <br>
+      Christ's love, deepen their <br>
+      understanding of the Bible, and develop <br>
+      a personal relationship with Jesus. <br>
+      Grounded in the belief that every child <br>
+      is cherished by God, SDMI endeavors to <br>
+      create nurturing spaces where children <br>
+      are welcomed to come to Christ freely, <br>
+      echoing Jesus' words in Matthew 19:14: <br>
+      "Let the little children come to me, and <br>
+      do not hinder them, for the kingdom of <br>
+      heaven belongs to such as these."
+    </div>
+  </div>
+
+  <div class="gallery">
+    <a target="blank" href="Baptism.jpg">
+      <img src="Baptism.jpg" alt="Church Pic" width="600" height="400">
+    </a>
+    <div class="desc">
+      <h2> BAPTISM </h2>
+      Baptism symbolizes spiritual renewal <br>
+      and commitment to Christ, publicly <br>
+      declaring faith and embracing <br>
+      forgiveness. Through baptism, <br>
+      individuals are cleansed of skin, rising to <br>
+      new life in Christ by the power of the <br>
+      Holy Spirit. It marks the beginning of a <br>
+      journey of discipleship, living in <br>
+      obedience to God's teachings. Baptism <br>
+      fosters unity within the church <br>
+      community, as believers celebrate each <br>
+      other's faith journeys...
+    </div>
+  </div>
+
+  
+  <div class="gallery-1">
+    <img src="Quote1.jpg" alt="quote" width="50%" height="500px">
+    <img src="Quote2.jpg" alt="quote" width="50%" height="500px">
+  </div>
+
+  <div class="gallery-2">
+    <img src="" alt="quote" width="50%" height="500px">
+    <img src="verse.jpg" alt="quote" width="50%" height="500px">
+  </div>
+
+  <div class="NYI">
+    <h1>NYI</h1>
+    <a target="blank" href="BE.jpg">
+     <img src="BE.jpg" alt="be" width="30%" height="300px">
+    </a>
+    
+    <div class="desc-1">
+      In Evangelism, we are called to BE God's light in <br>
+      the dark and ignored places of our world. We are <br>
+      to BE a faithful example of God's unconditional <br>
+      love. In BEING in Christ and BEING with others, we <br>
+      allow the Holy Spirit to work through our lives and <br>
+      we trust God with the results.
+    </div>
+  </div>
+
+  <div class="NYI">
+  <a target="blank" href="DO.jpg">
+    <img src="DO.jpg" alt="do" width="30%" height="300px">
+  </a>
+    
+  <div class="desc-1">
+    Through Discipleship, we journey together with <br>
+    other believers as we follow in the footsteps of <br>
+    Jesus. As we DO life together, we learn what it <br>
+    means to talk together, serve together, sacrifice <br>
+    together, fall and get back up together. We DO the <br>
+    hard work of becoming more like our Savior, living <br>
+    surrendered lives in community.
+   </div>
+  </div>
+
+
+  <div class="NYI">
+  <a target="_blank" href="GO.jpg">
+    <img src="GO.jpg" alt="go" width="30%" height="300px">
+  </a>
+    
+  <div class="desc-1">
+    In Leadership Development, we challenge and <br>
+    empower youth and their leaders to GO out into <br>
+    their communities as models of Christ's servant <br>
+    leadership. We cannot afford to wait until we think <br>
+    we know enough; we must GO now, learning along <br>
+    the way.
+  </div>
+</div>
+
+</body>
+
+</html>
